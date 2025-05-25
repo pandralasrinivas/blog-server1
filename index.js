@@ -5,12 +5,9 @@ const cors = require('cors');
 const path = require('path');
 const admin = require('firebase-admin');
 const cookieParser = require('cookie-parser');
-const serviceAccount = require('./servicekey.json'); // Download from Firebase Console
 const bcrypt = require('bcrypt');
 
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount)
-});
+
 
 const app = express();
 const port = process.env.PORT || 5000;
